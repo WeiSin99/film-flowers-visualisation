@@ -19,6 +19,9 @@ module.exports = {
       },
     ],
   },
+  devServer: {
+    watchFiles: ['src/**/*.js', 'src/**/*.html', 'public/**/*'],
+  },
   plugins: [
     new HtmlWebpackPlugin({
       template: path.join(__dirname, 'src', 'index.html'),
