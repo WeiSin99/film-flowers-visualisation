@@ -1089,6 +1089,15 @@ const pathObj = {
     'M0,85 L-20,100 C-55,70 -40,50 -30,40 L-20,60 C-35,20 -10,25 0,0 M0,85 L20,100 C55,70 40,50 30,40 L20,60 C35,20 10,25 0,0',
   R: 'M0 0 C50 25 50 75 0 100 C-50 75 -50 25 0 0',
 };
+const petalPaths = [
+  'M0 0 C50 50 50 100 0 100 C-50 100 -50 50 0 0',
+  'M-35 0 C-25 25 25 25 35 0 C50 25 25 75 0 100 C-25 75 -50 25 -35 0',
+  'M0,85 L-20,100 C-55,70 -40,50 -30,40 L-20,60 C-35,20 -10,25 0,0 M0,85 L20,100 C55,70 40,50 30,40 L20,60 C35,20 10,25 0,0',
+  'M0 0 C50 25 50 75 0 100 C-50 75 -50 25 0 0',
+];
+
+const topGenres = ['Action', 'Comedy', 'Animation', 'Drama'];
+const petalColors = ['#ffc8f0', '#cbf2bd', '#afe9ff', '#ffb09e'];
 
 const colorObj = {
   Action: '#ffc8f0',
@@ -1098,4 +1107,4 @@ const colorObj = {
   Other: '#FFF2B4',
 };
 
-export { movies, pathObj, colorObj };
+export { movies, pathObj, colorObj, topGenres, petalColors, petalPaths };
