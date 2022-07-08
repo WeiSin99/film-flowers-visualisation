@@ -80,32 +80,33 @@ path
   .attr('fill-opacity', '0.5')
   .attr('stroke-width', '2');
 
-const newG = g.data(newFlowers, (d) => d.title);
-newG.exit().remove();
-const enter = newG.enter().append('g');
+const newG = g
+  .data(newFlowers, (d) => d.title)
+  .join((enter) => {
+    const g = enter.append('g');
 
-enter
-  .selectAll('path')
-  .data((d) => {
-    return Array.from({ length: d.numPetals }).map((_, i) => {
-      return Object.assign({}, d, { rotate: i * (360 / d.numPetals) });
-    });
+    g.selectAll('path')
+      .data((d) => {
+        return Array.from({ length: d.numPetals }).map((_, i) => {
+          return Object.assign({}, d, { rotate: i * (360 / d.numPetals) });
+        });
+      })
+      .enter()
+      .append('path')
+      .attr('d', (d) => d.path)
+      .attr('transform', (d) => `rotate(${d.rotate})scale(${d.scale})`)
+      .attr('fill', (d) => d.color)
+      .attr('stroke', (d) => d.color)
+      .attr('fill-opacity', '0.5')
+      .attr('stroke-width', '2');
+
+    g.append('text')
+      .attr('text-anchor', 'middle')
+      .attr('dy', '.35em')
+      .style('font-size', '.7em')
+      .style('font-style', 'italic')
+      .text((d) => lodash.truncate(d.title, { length: 20 }));
+
+    return g;
   })
-  .enter()
-  .append('path')
-  .attr('d', (d) => d.path)
-  .attr('transform', (d) => `rotate(${d.rotate})scale(${d.scale})`)
-  .attr('fill', (d) => d.color)
-  .attr('stroke', (d) => d.color)
-  .attr('fill-opacity', '0.5')
-  .attr('stroke-width', '2');
-
-enter
-  .append('text')
-  .attr('text-anchor', 'middle')
-  .attr('dy', '.35em')
-  .style('font-size', '.7em')
-  .style('font-style', 'italic')
-  .text((d) => lodash.truncate(d.title, { length: 20 }));
-
-enter.merge(newG).attr('transform', (d) => `translate(${d.translate})`);
+  .attr('transform', (d) => `translate(${d.translate})`);
