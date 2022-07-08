@@ -1082,24 +1082,6 @@ const movies = [
   },
 ];
 
-const newMovies = movies.slice(0, -2);
-newMovies.push({
-  title: 'Avengers',
-  released: '2012-04-26T00:00:00.000Z',
-  genres: ['Action'],
-  rating: 8.0,
-  votes: 1363367,
-  rated: 'PG',
-});
-newMovies.push({
-  title: 'Dick Tracy',
-  released: '2012-04-26T00:00:00.000Z',
-  genres: ['Action', 'Comedy', 'Crime'],
-  rating: 6.1,
-  votes: 47595,
-  rated: 'PG',
-});
-
 const pathObj = {
   G: 'M0 0 C50 50 50 100 0 100 C-50 100 -50 50 0 0',
   PG: 'M-35 0 C-25 25 25 25 35 0 C50 25 25 75 0 100 C-25 75 -50 25 -35 0',
@@ -1125,12 +1107,4 @@ const colorObj = {
   Other: '#FFF2B4',
 };
 
-export {
-  movies,
-  newMovies,
-  pathObj,
-  colorObj,
-  topGenres,
-  petalColors,
-  petalPaths,
-};
+export { movies, pathObj, colorObj, topGenres, petalColors, petalPaths };

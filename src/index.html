@@ -7,15 +7,120 @@
     <title>Document</title>
   </head>
   <body>
-    <div style="display: flex; justify-content: center">
-      <div
-        style="
-          width: 1080px;
-          height: 800px;
-          overflow-y: scroll;
-          overflow-x: hidden;
-        "
-      >
+    <div
+      class="container"
+      style="
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin: 0 auto;
+        padding: 30px;
+        width: 1080px;
+      "
+    >
+      <div class="genre-filter" style="margin-bottom: 20px">
+        <div style="font: 700 0.9rem sans-serif; margin-bottom: 3px">
+          Genres
+        </div>
+        <label style="margin: 5px 10px 3px 0">
+          <input
+            type="checkbox"
+            name="input"
+            checked
+            value="Action"
+            style="margin-left: 0px"
+          />
+          Action
+        </label>
+        <label style="margin: 5px 10px 3px 0">
+          <input
+            type="checkbox"
+            name="input"
+            checked
+            value="Comedy"
+            style="margin-left: 0px"
+          />
+          Comedy
+        </label>
+        <label style="margin: 5px 10px 3px 0">
+          <input
+            type="checkbox"
+            name="input"
+            checked
+            value="Animation"
+            style="margin-left: 0px"
+          />
+          Animation
+        </label>
+        <label style="margin: 5px 10px 3px 0">
+          <input
+            type="checkbox"
+            name="input"
+            checked
+            value="Drama"
+            style="margin-left: 0px"
+          />
+          Drama
+        </label>
+        <label style="margin: 5px 10px 3px 0">
+          <input
+            type="checkbox"
+            name="input"
+            checked
+            value="Other"
+            style="margin-left: 0px"
+          />
+          Other
+        </label>
+      </div>
+
+      <div class="pg-filter" style="margin-bottom: 20px">
+        <div style="font: 700 0.9rem sans-serif; margin-bottom: 3px">
+          Parental Guidance Ratings
+        </div>
+        <label style="margin: 5px 10px 3px 0">
+          <input
+            type="checkbox"
+            name="input"
+            checked
+            value="G"
+            style="margin-left: 0px"
+          />
+          G
+        </label>
+        <label style="margin: 5px 10px 3px 0">
+          <input
+            type="checkbox"
+            name="input"
+            checked
+            value="PG"
+            style="margin-left: 0px"
+          />
+          PG
+        </label>
+        <label style="margin: 5px 10px 3px 0">
+          <input
+            type="checkbox"
+            name="input"
+            checked
+            value="PG-13"
+            style="margin-left: 0px"
+          />
+          PG-13
+        </label>
+        <label style="margin: 5px 10px 3px 0">
+          <input
+            type="checkbox"
+            name="input"
+            checked
+            value="R"
+            style="margin-left: 0px"
+          />
+          R
+        </label>
+      </div>
+
+      <div style="height: 800px; overflow-y: scroll; overflow-x: hidden">
         <svg width="1080px" height="1860px"></svg>
       </div>
     </div>
