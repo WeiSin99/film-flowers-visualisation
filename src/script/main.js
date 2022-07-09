@@ -61,7 +61,7 @@ const simulate = (graph) => {
       'collide',
       d3.forceCollide((d) => d.scale * 100)
     )
-    .force('center', d3.forceCenter(540, 930))
+    .force('center', d3.forceCenter(600, 600))
     .on('tick', () => {
       flower.attr('transform', (d) => `translate(${d.x}, ${d.y})`);
       genres.attr('transform', (d) => `translate(${d.x}, ${d.y})`);
