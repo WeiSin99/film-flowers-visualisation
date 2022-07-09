@@ -1,4 +1,4 @@
-# adopt-me
+# film-flowers-visualisation
 
 ![Project Recording](./project-recording.gif)
 Visualisation of movies by turning the dataset into a network of flowers where each flower represent a movie. <br>
