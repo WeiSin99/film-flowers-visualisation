@@ -1,7 +1,7 @@
 # film-flowers-visualisation
 
 ![Project Recording](./project-recording.gif)
-Visualisation of movies by turning the dataset into a network of flowers where each flower represent a movie. <br>
+Visualisation of movies by turning the dataset into a network of flowers positioned by their genres where each flower represent a movie. <br>
 The mapping of the flower is: <br>
 
 - Parental Guidance rating -> type of flower petal
